@@ -1,0 +1,49 @@
+name: 🧪 Test & Build
+
+on:
+  push:
+    branches: [ '*' ]
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run functional tests
+      run: npm test
+      
+    - name: Build Astro site
+      run: npm run build
+      
+    - name: Check build output
+      run: |
+        echo "Build completed successfully! 🎉"
+        echo "Build output size:"
+        du -sh dist/
+        echo "Files in dist/:"
+        ls -la dist/
+        
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: dist-files-${{ github.sha }}
+        path: dist/
+        retention-days: 7
+        
+    - name: Test and Build Summary
+      run: |
+        echo "✅ All functional tests and build completed successfully!"
+        echo "🧹 Viving Mops functional tests are squeaky clean!"
+        echo "🏗️ Build artifacts saved for potential deployment!"

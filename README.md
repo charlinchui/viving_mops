@@ -1,43 +1,115 @@
-# Astro Starter Kit: Minimal
+# 🧹 Viving Mops
 
-```sh
-npm create astro@latest -- --template minimal
+**Cleaning Up Vibe-Coded Chaos**
+
+A modern, playful website for Viving Mops, a fictional DevOps startup that rescues applications built entirely by AI prompts and vibes.
+
+## 🚀 Features
+
+- **Modern Design**: Clean, responsive layout with Tailwind CSS
+- **Playful Animations**: Subtle floating emojis and hover effects
+- **Three Pages**: Home, About, and Contact with real content
+- **CI/CD Ready**: GitHub Actions workflow for automatic deployment
+- **Lightweight**: Under 20 files, optimized for performance
+
+## 🛠️ Tech Stack
+
+- **Astro** - Static site generator
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first styling
+- **GitHub Pages** - Hosting and deployment
+
+## 📦 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎨 Design Features
 
-## 🚀 Project Structure
+- **Responsive Navigation**: Mobile-friendly menu with smooth animations
+- **Gradient Text**: Eye-catching hero text with CSS gradients
+- **Floating Emojis**: Animated background elements (🧹, 🧽, ✨, 🔧)
+- **Hover Effects**: Interactive cards with lift animations
+- **Modern Typography**: Clean, readable fonts with proper hierarchy
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📄 Pages
 
-```text
-/
-├── public/
+### Home (`/`)
+- Hero section with animated emojis
+- Feature cards showcasing services
+- Statistics section
+- Call-to-action buttons
+
+### About (`/about`)
+- Company story and mission
+- Detailed list of fixes we provide
+- Team information
+- Process explanation
+
+### Contact (`/contact`)
+- Emergency contact options
+- Contact form with urgency levels
+- Service areas covered
+- Response time guarantees
+
+## 🚀 Deployment
+
+The site is configured for automatic deployment to GitHub Pages:
+
+1. Push to `main` branch
+2. GitHub Actions builds the site
+3. Deploys to GitHub Pages automatically
+4. Available at `https://[username].github.io/viving_mops`
+
+## 🧹 The Story
+
+Viving Mops rescues applications that were built with more enthusiasm than engineering knowledge. We specialize in:
+
+- **Broken Pipelines**: Fix CI/CD workflows that were "just vibes"
+- **Spaghetti Code**: Refactor AI-generated chaos into maintainable code
+- **Missing Tests**: Add comprehensive test coverage
+- **Documentation**: Create proper README files and architecture docs
+
+## 📁 Project Structure
+
+```
+viving_mops/
+├── .github/workflows/ci-cd.yml    # GitHub Actions workflow
+├── public/favicon.svg            # Site favicon
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── layouts/Layout.astro      # Base layout with navigation
+│   ├── pages/
+│   │   ├── index.astro          # Home page
+│   │   ├── about.astro          # About page
+│   │   └── contact.astro        # Contact page
+│   └── styles/global.css        # Global styles and animations
+├── astro.config.mjs             # Astro configuration
+├── package.json                 # Dependencies and scripts
+└── README.md                    # This file
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🎯 Ready for Extension
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The project is designed to be easily extensible:
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Add new pages in `src/pages/`
+- Modify the layout in `src/layouts/Layout.astro`
+- Update styles in `src/styles/global.css`
+- The CI/CD pipeline will automatically deploy changes
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+**Built and deployed automatically via CI/CD ✨**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+*We bring hygiene to hybrid human-AI codebases.*

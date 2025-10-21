@@ -1,0 +1,103 @@
+name: 🧹 Viving Mops CI/CD
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run unit tests
+      run: npm test
+      
+    - name: Test Summary
+      run: |
+        echo "✅ All unit tests passed successfully!"
+        echo "🧹 Viving Mops unit tests are squeaky clean!"
+
+  build-and-test:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build Astro site
+      run: npm run build
+      
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+      
+    - name: Run e2e tests
+      run: npm run test:e2e
+      
+    - name: Check build output
+      run: |
+        echo "Build completed successfully! 🎉"
+        echo "Build output size:"
+        du -sh dist/
+        echo "Files in dist/:"
+        ls -la dist/
+        
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: dist-files
+        path: dist/
+        retention-days: 1
+        
+    - name: Build and Test Summary
+      run: |
+        echo "✅ Build and e2e tests completed successfully!"
+        echo "🧹 Viving Mops build is polished and ready!"
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: dist-files
+        path: dist/
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        
+    - name: Deployment Summary
+      run: |
+        echo "✅ Deployment completed successfully!"
+        echo "🌐 Your site should be available at:"
+        echo "   https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+        echo "🧹 Viving Mops is cleaning up the web, one deployment at a time!"

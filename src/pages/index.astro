@@ -1,16 +1,286 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Viving Mops — Cleaning Up Vibe-Coded Chaos">
+  <div class="relative overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center">
+          <!-- Floating emojis -->
+          <div class="absolute top-10 left-10 text-4xl animate-float opacity-60">🧹</div>
+          <div class="absolute top-20 right-20 text-3xl animate-wiggle opacity-60">🧽</div>
+          <div class="absolute bottom-20 left-20 text-2xl animate-sparkle opacity-60">✨</div>
+          <div class="absolute bottom-10 right-10 text-3xl animate-float opacity-60" style="animation-delay: 1s;">🔧</div>
+          
+          <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+            🧹<span class="gradient-text"> Viving Mops</span>
+          </h1>
+          <h2 class="text-2xl md:text-4xl font-semibold text-gray-700 mb-4">
+            Cleaning Up Vibe-Coded Chaos
+          </h2>
+          <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+            We rescue apps built entirely by AI prompts and vibes. 
+            <span class="text-indigo-600 font-semibold">No more spaghetti code, broken pipelines, or missing tests.</span>
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="/about" 
+              class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover-lift shadow-lg"
+            >
+              Learn Our Story 🚀
+            </a>
+            <a 
+              href="/contact" 
+              class="bg-white hover:bg-gray-50 text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold border-2 border-indigo-600 transition-all duration-300 hover-lift shadow-lg"
+            >
+              Get Help Now 🆘
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white/50 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What We Clean Up
+          </h3>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            From AI-generated chaos to production-ready code
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg hover-lift">
+            <div class="text-4xl mb-4">🔧</div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-3">Broken Pipelines</h4>
+            <p class="text-gray-600">
+              Fix CI/CD workflows that were "just vibes" and actually make them work in production.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-8 shadow-lg hover-lift">
+            <div class="text-4xl mb-4">🍝</div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-3">Spaghetti Code</h4>
+            <p class="text-gray-600">
+              Refactor AI-generated code into maintainable, readable, and scalable solutions.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-8 shadow-lg hover-lift">
+            <div class="text-4xl mb-4">🧪</div>
+            <h4 class="text-xl font-semibold text-gray-900 mb-3">Missing Tests</h4>
+            <p class="text-gray-600">
+              Add comprehensive test coverage to prevent future "it works on my machine" disasters.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            Our Impact So Far
+          </h3>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">50+</div>
+              <div class="text-gray-600">Apps Rescued</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">99%</div>
+              <div class="text-gray-600">Success Rate</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">24/7</div>
+              <div class="text-gray-600">Emergency Cleanup</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">∞</div>
+              <div class="text-gray-600">Vibes Fixed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            What Our Customers Say
+          </h3>
+          <p class="text-xl text-gray-600">
+            Real stories from rescued codebases
+          </p>
+        </div>
+        
+        <div class="relative overflow-hidden">
+          <div id="testimonials-carousel" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Testimonial 1 -->
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                  <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">👨‍💻</span>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">Alex Chen</h4>
+                    <p class="text-gray-600">CTO, TechStart Inc.</p>
+                  </div>
+                </div>
+                <blockquote class="text-lg text-gray-700 italic leading-relaxed">
+                  "Our AI-generated React app was a complete disaster. 500+ components in one file, no state management, and zero tests. 
+                  Viving Mops turned our spaghetti code into a maintainable masterpiece. Our team can actually work with it now!"
+                </blockquote>
+              </div>
+            </div>
+            
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                  <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">👩‍💼</span>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">Sarah Rodriguez</h4>
+                    <p class="text-gray-600">Product Manager, DataFlow</p>
+                  </div>
+                </div>
+                <blockquote class="text-lg text-gray-700 italic leading-relaxed">
+                  "We had a 'working' AI-generated API with 200+ endpoints and no documentation. Every deployment was a prayer. 
+                  Viving Mops not only fixed our broken CI/CD but also wrote actual documentation. Our developers stopped crying!"
+                </blockquote>
+              </div>
+            </div>
+            
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                  <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">👨‍🔧</span>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">Mike Thompson</h4>
+                    <p class="text-gray-600">DevOps Engineer, CloudScale</p>
+                  </div>
+                </div>
+                <blockquote class="text-lg text-gray-700 italic leading-relaxed">
+                  "Our AI-generated microservices were a nightmare. No service discovery, random port assignments, and zero monitoring. 
+                  Viving Mops transformed our chaos into a proper distributed system. We can actually sleep at night now!"
+                </blockquote>
+              </div>
+            </div>
+            
+            <div class="w-full flex-shrink-0 px-4">
+              <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+                <div class="flex items-center mb-6">
+                  <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                    <span class="text-2xl">👩‍💻</span>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900">Emma Wilson</h4>
+                    <p class="text-gray-600">Lead Developer, StartupXYZ</p>
+                  </div>
+                </div>
+                <blockquote class="text-lg text-gray-700 italic leading-relaxed">
+                  "Our AI-generated mobile app had 50+ screens in one component and crashed on every third tap. 
+                  Viving Mops refactored it into a proper React Native app with navigation, state management, and actual error handling. 
+                  Our users stopped uninstalling!"
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex justify-center mt-8 space-x-4">
+            <button id="prev-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button id="next-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="flex justify-center mt-6 space-x-2">
+            <button class="carousel-dot w-3 h-3 rounded-full bg-indigo-600 transition-colors"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-colors"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-colors"></button>
+            <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-colors"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-indigo-600">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Ready to Clean Up Your Codebase?
+        </h3>
+        <p class="text-xl text-indigo-100 mb-8">
+          Don't let AI-generated chaos hold your team back. Let us bring order to the chaos.
+        </p>
+        <a 
+          href="/contact" 
+          class="bg-white hover:bg-gray-100 text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover-lift shadow-lg inline-block"
+        >
+          Start Your Cleanup Journey 🧹
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const totalSlides = 4;
+    const carousel = document.getElementById('testimonials-carousel');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    function updateCarousel() {
+      const translateX = -currentSlide * 100;
+      carousel!.style.transform = `translateX(${translateX}%)`;
+      
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('bg-indigo-600', index === currentSlide);
+        dot.classList.toggle('bg-gray-300', index !== currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    }
+
+    nextBtn?.addEventListener('click', nextSlide);
+    prevBtn?.addEventListener('click', prevSlide);
+
+    setInterval(nextSlide, 10000);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateCarousel();
+      });
+    });
+  </script>
+</Layout>
