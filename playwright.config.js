@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://localhost:4321',
+    baseURL: 'http://localhost:4321/viving_mops',
     trace: 'on-first-retry',
   },
 
@@ -21,7 +21,6 @@ export default defineConfig({
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-    // Temporarily disable webkit and mobile tests due to system dependencies
     // {
     //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },
@@ -38,7 +37,8 @@ export default defineConfig({
 
   webServer: {
     command: 'npm run preview',
-    url: 'http://localhost:4321',
+    url: 'http://localhost:4321/viving_mops',
     reuseExistingServer: !process.env.CI,
+    timeout: 120 * 1000,
   },
 });

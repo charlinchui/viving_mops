@@ -4,5 +4,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://charlinchui.github.io',
+  base: '/viving_mops',
   integrations: [tailwind()],
+  output: 'static',
 });

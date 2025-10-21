@@ -7,8 +7,8 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Viving Mops Homepage', () => {
   test.beforeEach(async ({ page }) => {
-    // Navigate to the homepage
-    await page.goto('/');
+    // Navigate to the homepage with explicit path
+    await page.goto('/viving_mops/');
   });
 
   test('should load the homepage successfully', async ({ page }) => {
