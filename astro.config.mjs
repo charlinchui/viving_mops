@@ -8,4 +8,8 @@ export default defineConfig({
   base: '/viving_mops',
   integrations: [tailwind()],
   output: 'static',
+  outDir: './dist',
+  build: {
+    assets: 'static',
+  },
 });
