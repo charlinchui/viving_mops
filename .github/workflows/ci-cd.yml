@@ -88,12 +88,6 @@ jobs:
     if: github.ref == 'refs/heads/master'
     
     steps:
-    # - name: Download build artifacts
-    #   uses: actions/download-artifact@v4
-    #   with:
-    #     name: github-pages
-    #     path: . 
-        
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v4
       id: deployment 
