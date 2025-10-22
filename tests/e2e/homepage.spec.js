@@ -31,8 +31,8 @@ test.describe('Viving Mops Homepage', () => {
     await expect(page.locator('p').first()).toContainText('We rescue apps built entirely by AI prompts and vibes');
     
     // Check CTA buttons - use more specific selectors
-    await expect(page.locator('a[href="/about"]').filter({ hasText: 'Learn Our Story' })).toContainText('Learn Our Story 🚀');
-    await expect(page.locator('a[href="/contact"]').filter({ hasText: 'Get Help Now' })).toContainText('Get Help Now 🆘');
+    await expect(page.locator('a[href="/viving_mops/about"]').filter({ hasText: 'Learn Our Story' })).toContainText('Learn Our Story 🚀');
+    await expect(page.locator('a[href="/viving_mops/contact"]').filter({ hasText: 'Get Help Now' })).toContainText('Get Help Now 🆘');
   });
 
   test('should display features section', async ({ page }) => {
@@ -105,17 +105,17 @@ test.describe('Viving Mops Homepage', () => {
 
   test('should have working navigation links', async ({ page }) => {
     // Test about link - use more specific selector
-    const aboutLink = page.locator('a[href="/about"]').filter({ hasText: 'Learn Our Story' });
+    const aboutLink = page.locator('a[href="/viving_mops/about"]').filter({ hasText: 'Learn Our Story' });
     await expect(aboutLink).toBeVisible();
-    await expect(aboutLink).toHaveAttribute('href', '/about');
+    await expect(aboutLink).toHaveAttribute('href', '/viving_mops/about');
     
     // Test contact link - use more specific selector
-    const contactLink = page.locator('a[href="/contact"]').filter({ hasText: 'Get Help Now' });
+    const contactLink = page.locator('a[href="/viving_mops/contact"]').filter({ hasText: 'Get Help Now' });
     await expect(contactLink).toBeVisible();
-    await expect(contactLink).toHaveAttribute('href', '/contact');
+    await expect(contactLink).toHaveAttribute('href', '/viving_mops/contact');
     
     // Test final CTA link
-    const finalCtaLink = page.locator('a[href="/contact"]').filter({ hasText: 'Start Your Cleanup Journey' });
+    const finalCtaLink = page.locator('a[href="/viving_mops/contact"]').filter({ hasText: 'Start Your Cleanup Journey' });
     await expect(finalCtaLink).toContainText('Start Your Cleanup Journey');
   });
 
@@ -169,7 +169,7 @@ test.describe('Viving Mops Homepage', () => {
 
   test('should load quickly', async ({ page }) => {
     const startTime = Date.now();
-    await page.goto('/');
+    await page.goto('/viving_mops/');
     await page.waitForLoadState('networkidle');
     const loadTime = Date.now() - startTime;
     
