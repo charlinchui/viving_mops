@@ -1,8 +1,3 @@
-/**
- * End-to-end tests for the Viving Mops homepage
- * Tests user interactions and page functionality
- */
-
 import { test, expect } from '@playwright/test';
 
 test.describe('Viving Mops Homepage', () => {
